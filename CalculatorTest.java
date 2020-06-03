@@ -19,6 +19,14 @@ assertEquals(0, Calculator.add(""));
   }
   @Test
   public void returnMultipleNUmbers(){
+      assertEquals(6, Calculator.add("1,2,3"));
   
   }
+  @Test
+  public void shouldAcceptNewLinAsValidDelimeter(){
+      assertEquals(6, Calculator.add("1,2\n3"));
+  }
+  @Test
+  public void shouldAcceptDelimiterSyntax(){
+  assertEquals(3, Calculator.add("//:\n1;2"))}
 }
