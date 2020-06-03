@@ -2,6 +2,7 @@
 package calculator;
 import ch.lamdaj.function.convert.Converter;
 import static ch.lamdaj.Lamda.*;
+import java.util.list;
 
 public class Calculator{
   if(text.isEmpty()){
@@ -14,7 +15,7 @@ String[] tokens = text.split(",");
     
   List<Integer> numbers = convert(tokens, toInt());
     
-  return Integer.parse(tokens[0])+ toInt (tokens[1]);
+  return sum(numbers).intValue();
 }
   else {
     return toInt(text);
@@ -29,6 +30,9 @@ private static Converter<String, Integer>toInt(){
       }
   };
 }
+  private static int toInt(String text) throws NnumberFormatException{
+  return Integer.parseInt(text);
+  }
   
   
 }
